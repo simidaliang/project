@@ -1,0 +1,274 @@
+@charset "UTF-8";
+.header-wrap {
+  width: 99%;
+  height: 90px;
+  border-bottom: solid 2px #F5F5F5;
+  margin: 5px auto 0 auto; }
+
+.header-wrap {
+  position: relative;
+  z-index: 100;
+  background-color: #FFF;
+  width: 100%; }
+
+.header-wrap .wrapper {
+  width: 1000px; }
+
+.public-head-layout {
+  height: 80px; }
+  .public-head-layout .site-logo {
+    margin: 10px 0 0 0;
+    position: relative;
+    width: 350px;
+    height: 68px;
+    float: left; }
+  .public-head-layout .nc-login-now {
+    font-size: 14px;
+    color: #AAA;
+    line-height: 24px;
+    float: right;
+    height: 24px;
+    margin-top: 50px; }
+    .public-head-layout .nc-login-now a {
+      font-weight: 600;
+      margin-left: 4px;
+      font-family: 微软雅黑; }
+
+.wrapper {
+  width: 1200px;
+  margin: auto; }
+
+.nc-register-bg {
+  background: #FAFAFA url(../images/register_bg.png) repeat 50% 50%;
+  width: 100%;
+  height: 680px;
+  overflow: hidden; }
+
+.nc-register-box {
+  background: rgba(0, 0, 0, 0.15);
+  width: 860px;
+  height: 560px;
+  padding: 10px;
+  margin: 60px auto; }
+
+.nc-register-layout {
+  background-color: #FFF;
+  display: block;
+  width: 820px;
+  height: 520px;
+  padding: 19px;
+  border: solid 1px #CCC;
+  overflow: hidden; }
+  .nc-register-layout .left {
+    width: 600px;
+    height: 520px;
+    float: left; }
+  .nc-register-layout .right {
+    width: 200px;
+    height: 500px;
+    float: right;
+    padding: 20px 0 0 19px;
+    border-left: solid 1px #E6E6E6; }
+    .nc-register-layout .right h4 {
+      font-size: 14px;
+      line-height: 20px;
+      height: 20px;
+      margin-bottom: 20px;
+      color: #333; }
+    .nc-register-layout .right .reister-after li {
+      color: #999;
+      line-height: 24px;
+      margin-bottom: 10px;
+      padding-left: 12px; }
+    .nc-register-layout .right .reister-after i {
+      background: url(../images/login_pic.png) no-repeat;
+      vertical-align: middle;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px; }
+    .nc-register-layout .right .reister-after .ico01 i {
+      background-position: 0 -76px; }
+    .nc-register-layout .right .reister-after .ico02 i {
+      background-position: -30px -76px; }
+    .nc-register-layout .right .reister-after .ico03 i {
+      background-position: -60px -76px; }
+    .nc-register-layout .right .reister-after .ico05 i {
+      background-position: -120px -76px; }
+    .nc-register-layout .right .reister-after .ico06 i {
+      background-position: -150px -76px; }
+
+.nc-register-mode {
+  width: 580px; }
+  .nc-register-mode .tabs-content {
+    padding: 50px 80px 0 100px; }
+
+.tabs-nav {
+  font-size: 0;
+  word-spacing: -1em;
+  border-bottom: solid 1px #E6E6E6; }
+  .tabs-nav li {
+    vertical-align: bottom;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    margin-bottom: -1px; }
+    .tabs-nav li a {
+      font-size: 18px;
+      color: #999;
+      line-height: 24px;
+      padding-bottom: 13px;
+      position: relative;
+      z-index: 1;
+      font-family: "å¾®è½¯é›…é»‘"; }
+      .tabs-nav li a i {
+        font-size: 0;
+        line-height: 0;
+        border-color: #FF500B transparent transparent transparent;
+        border-style: solid dashed dashed dashed;
+        border-width: 7px;
+        display: none;
+        width: 0;
+        height: 0;
+        margin-left: -4px;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: -17px; }
+
+.tabs-container {
+  position: relative;
+  z-index: 1; }
+
+.nc-login-form {
+  display: block; }
+  .nc-login-form dl {
+    background-color: #FFF;
+    width: 398px;
+    height: 52px;
+    margin-top: -1px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+    z-index: 1; }
+    .nc-login-form dl dt {
+      font-size: 14px;
+      line-height: 20px;
+      color: #666;
+      width: 88px;
+      padding: 16px 0 16px 20px;
+      float: left; }
+    .nc-login-form dl dd {
+      height: 28px;
+      float: left;
+      padding: 12px 0; }
+      .nc-login-form dl dd .text {
+        font-family: "microsoft yahei";
+        font-size: 14px;
+        line-height: 28px;
+        width: 290px;
+        height: 28px;
+        padding: 0;
+        border: none 0; }
+  .nc-login-form .code-div {
+    width: 100%;
+    height: 54px; }
+    .nc-login-form .code-div dl {
+      width: 277px;
+      float: left; }
+      .nc-login-form .code-div dl dt {
+        font-size: 14px;
+        line-height: 20px;
+        color: #666;
+        width: 88px;
+        padding: 16px 0 16px 20px;
+        float: left; }
+      .nc-login-form .code-div dl dd {
+        height: 28px;
+        float: left;
+        padding: 12px 0; }
+    .nc-login-form .code-div span {
+      width: 120px;
+      height: 52px;
+      float: left;
+      margin: -1px 0 0 -1px;
+      border: solid 1px #E6E6E6;
+      position: relative;
+      z-index: 1; }
+  .nc-login-form .clause-div {
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    width: 400px;
+    height: 30px;
+    margin-top: 15px;
+    border: none 0; }
+    .nc-login-form .clause-div .checkbox {
+      vertical-align: middle;
+      margin-right: 8px; }
+  .nc-login-form .submit-div {
+    margin-top: 15px; }
+    .nc-login-form .submit-div .submit {
+      font-family: "microsoft yahei";
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFF;
+      background-color: #FF500B;
+      width: 398px;
+      height: 42px;
+      border: solid 1px #e4393c;
+      border-radius: 3px;
+      cursor: pointer; }
+
+.checkbox, .radio {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px; }
+
+a {
+  color: #06C; }
+
+.w100 {
+  width: 100px !important; }
+
+.reg_psw {
+  text-indent: 15px; }
+
+.nc-login-form .code-div span:hover a {
+  display: block; }
+
+#footer {
+  padding-top: 30px; }
+
+label.error {
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF5B57;
+  display: block; }
+
+.nc-login-form label.error i {
+  font-size: 24px;
+  margin-right: 12px;
+  color: #FF500B;
+  vertical-align: middle; }
+
+.nc-login-form label.error {
+  color: #000;
+  line-height: 24px;
+  background: #FFF5D9 no-repeat 0 0;
+  text-align: left;
+  white-space: nowrap;
+  height: 24px;
+  padding: 8px 12px 8px 24px;
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  left: 300px; }
+
+#psw {
+  border: none; }
+
+/*# sourceMappingURL=register.css.map */

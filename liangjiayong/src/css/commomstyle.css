@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* 底部*/
+#footer {
+  font-size: 12px !important;
+  text-align: center;
+  clear: both;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  overflow: hidden;
+  font-family: "微软雅黑";
+  background-color: #343a3a; }
+  #footer .wrapper p {
+    color: #eeeeee;
+    word-spacing: 5px;
+    padding: 15px 0 0; }
+    #footer .wrapper p a {
+      color: #eeeeee;
+      text-decoration: none;
+      outline: medium none; }
+  #footer .footer-img {
+    padding: 20px 0 10px;
+    width: 493px;
+    margin: 0 auto;
+    overflow: hidden; }
+    #footer .footer-img li {
+      display: block;
+      float: left;
+      margin-right: 20px; }
+      #footer .footer-img li a {
+        display: block;
+        width: 108px;
+        height: 40px;
+        background: url(../images/yangguang-footer.png); }
+      #footer .footer-img li img {
+        width: 108px; }
+      #footer .footer-img li a.img01 {
+        background-position: 0 0; }
+      #footer .footer-img li a.img05 {
+        background-position: -488px 0; }
+  #footer li:last-child {
+    margin-right: 0px; }
+
+/*# sourceMappingURL=commomstyle.css.map */

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/commomstyle.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/ind.js"></script>
+    <script src="../js/cart.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="public-top-layout">
+        <div class="topbar wrapper">
+            <div class="left">
+                <div class="mall-home"><a href="/"><span class="icon"></span>返回商城首页</a></div>
+                <!-- s 配送至-->
+                <div class="my-city" id="shortCutMyCityPanel"><a href="javascript:;" class="area"><span
+                            class="icon"></span><span id="shortCutAreaName" title="广东省" data-id="19">广东省</span>
+                        <i></i></a>
+                    <div id="shortCutAreaList" class="area-list"><a href="javascript:;" data-deep="1"
+                            data-id="1">北京市</a><a href="javascript:;" data-deep="1" data-id="2">天津市</a><a
+                            href="javascript:;" data-deep="1" data-id="3">河北省</a><a href="javascript:;" data-deep="1"
+                            data-id="4">山西省</a><a href="javascript:;" data-deep="1" data-id="5">内蒙古自治区</a><a
+                            href="javascript:;" data-deep="1" data-id="6">辽宁省</a><a href="javascript:;" data-deep="1"
+                            data-id="7">吉林省</a><a href="javascript:;" data-deep="1" data-id="8">黑龙江省</a><a
+                            href="javascript:;" data-deep="1" data-id="9">上海市</a><a href="javascript:;" data-deep="1"
+                            data-id="10">江苏省</a><a href="javascript:;" data-deep="1" data-id="11">浙江省</a><a
+                            href="javascript:;" data-deep="1" data-id="12">安徽省</a><a href="javascript:;" data-deep="1"
+                            data-id="13">福建省</a><a href="javascript:;" data-deep="1" data-id="14">江西省</a><a
+                            href="javascript:;" data-deep="1" data-id="15">山东省</a><a href="javascript:;" data-deep="1"
+                            data-id="16">河南省</a><a href="javascript:;" data-deep="1" data-id="17">湖北省</a><a
+                            href="javascript:;" data-deep="1" data-id="18">湖南省</a><a href="javascript:;" data-deep="1"
+                            data-id="19" class="selected">广东省</a><a href="javascript:;" data-deep="1"
+                            data-id="20">广西壮族自治区</a><a href="javascript:;" data-deep="1" data-id="21">海南省</a><a
+                            href="javascript:;" data-deep="1" data-id="22">重庆市</a><a href="javascript:;" data-deep="1"
+                            data-id="23">四川省</a><a href="javascript:;" data-deep="1" data-id="24">贵州省</a><a
+                            href="javascript:;" data-deep="1" data-id="25">云南省</a><a href="javascript:;" data-deep="1"
+                            data-id="26">西藏自治区</a><a href="javascript:;" data-deep="1" data-id="27">陕西省</a><a
+                            href="javascript:;" data-deep="1" data-id="28">甘肃省</a><a href="javascript:;" data-deep="1"
+                            data-id="29">青海省</a><a href="javascript:;" data-deep="1" data-id="30">宁夏回族自治区</a><a
+                            href="javascript:;" data-deep="1" data-id="31">新疆维吾尔自治区</a><a href="javascript:;"
+                            data-deep="1" data-id="32">台湾省</a><a href="javascript:;" data-deep="1"
+                            data-id="33">香港特别行政区</a><a href="javascript:;" data-deep="1" data-id="34">澳门特别行政区</a><a
+                            href="javascript:;" data-deep="1" data-id="35">海外</a></div>
+                </div>
+                <!-- E 配送至-->
+            </div>
+            <div class="right" id="quickMenu">
+                <dl class="top-menu login">
+                    <dt class="top-menu-title"> <a target="_blank" href="/member/">13032890253 <sub
+                                title="会员等级">暂无等级会员</sub></a><span class="arrow"></span></dt>
+                    <dd class="top-menu-con">
+                        <div class="user-box">
+                            <div class="user-avatar"><img
+                                    src="https://statics.cnrmall.com/public/img/avatar.gif@160w_160h"></div>
+                            <div class="user-info">
+                                <p>上次登录：
+                                    <time>2019-02-12 21:31:11</time>
+                                </p>
+                                <a href="">退出</a>
+                            </div>
+
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="top-menu my-order">
+                    <dt class="top-menu-title"><a target="_blank" href="/member/orders/list">我的订单</a><span
+                            class="arrow"></span></dt>
+                    <dd class="top-menu-con">
+                        <ul>
+                            <li><a target="_blank" href="/member/orders/list/?ordersState=new">待支付</a></li>
+                            <li><a target="_blank" href="/member/orders/list/?ordersState=send">待确认</a></li>
+                            <li><a target="_blank" href="/member/orders/list/?ordersState=noeval">待评价</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu my-mall">
+                    <dt class="top-menu-title"><a target="_blank" href="/member/">我的商城</a><span class="arrow"></span>
+                    </dt>
+                    <dd class="top-menu-con">
+                        <ul class="user-centent-menu">
+                            <li><a href="/member/message/list" target="_top">站内消息</a></li>
+                            <li><a href="/member/consult/list" target="_top">咨询回复</a></li>
+                            <li><a href="/member/favorites/goods" target="_top">我的收藏</a></li>
+                            <li><a href="/member/goodsbrowse" target="_top">我的足迹</a></li>
+                            <li><a href="/member/pointslog" target="_top">我的积分</a></li>
+                            <li><a href="/member/voucher/index" target="_top">我的优惠券</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu call-center">
+                    <dt class="top-menu-title">客户服务<span class="arrow"></span></dt>
+                    <dd class="top-menu-con">
+                        <ul>
+                            <li><a target="_blank" href="https://www1.cnrmall.com/article/list/11">购物指南</a></li>
+                            <li><a target="_blank" href="https://www1.cnrmall.com/article/list/15">售后服务</a></li>
+                            <li><a target="_blank" href="https://www1.cnrmall.com/article/list/12">商家服务</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu mobile-mall">
+                    <dt class="top-menu-title"><span class="icon"></span>手机商城<span class="arrow"></span></dt>
+                    <dd class="top-menu-con" style="width: 140px"> <span class="QRcode"> <img
+                                src="https://pic.cnrmall.com/qr/app/url.gif">
+                            <p>扫描二维码<br>
+                                更多优惠关注微信公众号</p>
+                        </span> </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- logo -->
+    <div class="ncc-head-wrap ">
+        <header class="ncc-head-layout">
+            <div class="site-logo"><a href="/"><img
+                        src="https://pic4.cnrmall.com/image/2c/6c/2c6ce4ec89967ee42ef77fb0b524fc0c.png" alt=""></a>
+            </div>
+            <ul class="ncc-flow">
+                <li class="current"><i class="step1"></i>
+                    <p>我的购物车</p>
+                    <sub></sub>
+                    <div class="hr"></div>
+                </li>
+                <li><i class="step2"></i>
+                    <p>确认订单/结算</p>
+                    <sub></sub>
+                    <div class="hr"></div>
+                </li>
+                <li><i class="step3"></i>
+                    <p>生成订单/支付</p>
+                    <sub></sub>
+                    <div class="hr"></div>
+                </li>
+                <li><i class="step4"></i>
+                    <p>完成支付</p>
+                    <sub></sub>
+                    <div class="hr"></div>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="ncc-main">
+        <div class="ncc-title ncc-wrapper">
+            <h3>我的购物车</h3>
+            <h5>查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</h5>
+        </div>
+        <div class="ncc-cart-status">购物车状态：<span class="bar"><span class="sub" id="buyMaxTopPanel" data-max="50"
+                    style="width: 4px;"></span></span><span class="sum" id="buyTopSumPanel">2/50（线上：2，门店：0）</span></div>
+        <form action="/buy" method="POST" id="form_buy" name="form_buy">
+            <input type="hidden" value="1" name="isCart">
+            <input type="hidden" name="buyData" id="buyDataInput" value="">
+            <input type="hidden" name="isExistBundling" id="isExistBundlingInput" value="0">
+            <div class="ncc-wrapper">
+                <div id="normalGoodsList">
+                    <div class="ncc-mod-thead">
+                        <ul class="columns">
+                            <li class="col-opt"><span class="checkbox-layout">
+                                    <label><input type="checkbox" class="checkbox" id="checkedAllBtn"
+                                            autocomplete="off">全选</label>
+                                </span></li>
+                            <li class="col-goods">商品</li>
+                            <li class="col-quantity">数量</li>
+                            <li class="col-unitprice">单价</li>
+                            <li class="col-rebate">优惠</li>
+                            <li class="col-amount">金额</li>
+                        </ul>
+                    </div>
+
+                    <div class="ncc-mod-tbody" id="modTbody_1">
+                        <div class="store-bar">
+                            <div class="fl"> <span class="checkbox-layout">
+                                    <input type="checkbox" class="checkbox J-store-all-check" data-store-all-check="1"
+                                        autocomplete="off" id="storeAllCheck_1">
+                                    <label></label>
+                                </span><a class="store-name" href="/store/1">官方店铺</a>
+                            </div>
+                            <div class="fr"> </div>
+                        </div>
+
+                    </div>
+                    <div class="ncc-mod-tbody" id="modTbody_28">
+                        <div class="store-bar">
+                            <div class="fl"> <span class="checkbox-layout">
+                                    <input type="checkbox" class="checkbox J-store-all-check" data-store-all-check="28"
+                                        autocomplete="off" id="storeAllCheck_28">
+                                    <label></label>
+                                </span><a class="store-name" href="/store/28">中国农垦官方旗舰店</a>
+                            </div>
+                            <div class="fr"> </div>
+                        </div>
+
+                    </div>
+
+                    <div id="modTfootPanelShow">
+                        <div class="ncc-mod-tfoot " id="modTfootPanel">
+                            <div id="disableBuyTips" class="group-wrapper group-popup hidden">
+                                <div id="J_SelectedItemsList" class="group-content">
+                                    <div class="group-top-title">
+                                        <p>请分开结算以下商品</p>
+                                        <span id="J_group_close_btn" class="group-close-btn"></span>
+                                    </div>
+                                    <div class="groups-list" id="disableBuyTipsGoodsList"></div>
+                                </div><span class="arrow"></span>
+                            </div>
+                            <div class="actions"><span class="checkbox-layout">
+
+                                    <label for="checkedAllBottomBtn"><input type="checkbox" class="checkbox"
+                                            id="checkedAllBottomBtn" autocomplete="off">全选</label>
+                                </span> <a href="javascript:;" class="delete-checked" id="mDelSkuBtn">删除</a> </div>
+                            <div class="summary">
+                                <dl>
+                                    <dt>选购商品种类：</dt>
+                                    <dd class="kinds-total"><span class="value" id="kindsTotal">0</span>种</dd>
+                                    <dt>选购数量总计：</dt>
+                                    <dd class="quantity-total"><span class="value" id="quantityTotal">0</span>件</dd>
+                                    <dt>商品金额总计：</dt>
+                                    <dd class="amount-total"><strong class="value" id="amountTotal">
+                                            <span class="yuan">￥</span><span class="integer">0</span><span
+                                                class="pointer">.</span><span class="decimal">00</span>
+                                        </strong></dd>
+                                </dl>
+                            </div>
+                            <div class="form">
+                                <button id="cartSubmit" class="checkout checkout-disabled">结算</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- 足跡 -->
+    <div id="browse_like_div" class="nc-goods-borowse">
+        <div class="nc-goods-browse-box">
+            <div class="of">
+                <div class="title cur" nctype="browseLikeTabItem" data-tab-type="goodsBrowse">
+                    <h3>我的足迹</h3>
+                </div>
+            </div>
+            <!-- 猜你喜欢S -->
+            <!-- 猜你喜欢E -->
+
+            <!-- 我的足迹S -->
+            <div id="goodsBrowseContent" class="content" style="z-index:1;">
+                <div class="bx-wrapper" style="max-width: 1170px;">
+                    <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 194px;">
+                        <ul id="goodsBrowseList" class="goods-list"
+                            style="width: 915%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/5676" target="_blank"> <img
+                                            alt="格林燕山栗子鸡秒杀组 货号123420" src="../images/lunbo11.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/5676" title="格林燕山栗子鸡秒杀组 货号123420" target="_blank">格林燕山栗子鸡秒杀组
+                                            货号123420</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">184</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/20022" target="_blank"> <img
+                                            alt="叶朵去污吸水干湿两用抹布 货号125501" src="../images/lunbo11.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/20022" title="叶朵去污吸水干湿两用抹布 货号125501"
+                                            target="_blank">叶朵去污吸水干湿两用抹布 货号125501</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">298</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/24164" target="_blank"> <img
+                                            alt="老洪祥18K金天然翠绿翡翠方牌 货号125557" src="../images/lunbo11.jpg@240w_240h" </a>
+                                            </div> <dl class="goods-info">
+                                        <dt><a href="/goods/24164" title="老洪祥18K金天然翠绿翡翠方牌 货号125557"
+                                                target="_blank">老洪祥18K金天然翠绿翡翠方牌 货号125557</a></dt>
+                                        <span class="yuan">￥</span><span class="integer">56800</span><span
+                                            class="pointer">.</span><span class="decimal">00</span>
+                                        </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/20028" target="_blank"> <img
+                                            alt="【全球原产】伊朗鸵鸟油舒缓组 货号124927" src="../images/lunbo11.jpg@240w_240h" </a>
+                                            </div> <dl class="goods-info">
+                                        <dt><a href="/goods/20028" title="【全球原产】伊朗鸵鸟油舒缓组 货号124927"
+                                                target="_blank">【全球原产】伊朗鸵鸟油舒缓组 货号124927</a></dt>
+                                        <span class="yuan">￥</span><span class="integer">399</span><span
+                                            class="pointer">.</span><span class="decimal">00</span>
+                                        </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/4276" target="_blank"> <img
+                                            alt="百年聚华驴腿肉套组 货号121752" src="../images/lunbo11.jpg@240w_240h" </a> </div>
+                                            <dl class="goods-info">
+                                        <dt><a href="/goods/4276" title="百年聚华驴腿肉套组 货号121752" target="_blank">百年聚华驴腿肉套组
+                                                货号121752</a></dt>
+                                        <span class="yuan">￥</span><span class="integer">298</span><span
+                                            class="pointer">.</span><span class="decimal">00</span>
+                                        </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/13380" target="_blank"> <img
+                                            alt="【中国农垦】北大荒 黑龙江农垦 龙良长粒香米2.5kg" src="../images/lunbo11.jpg@240w_240h" </a>
+                                            </div> <dl class="goods-info">
+                                        <dt><a href="/goods/13380" title="【中国农垦】北大荒 黑龙江农垦 龙良长粒香米2.5kg"
+                                                target="_blank">【中国农垦】北大荒 黑龙江农垦 龙良长粒香米2.5kg</a></dt>
+                                        <span class="yuan">￥</span><span class="integer">39</span><span
+                                            class="pointer">.</span><span class="decimal">90</span>
+                                        </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/5049" target="_blank"> <img
+                                            alt="西王牌玉米胚芽保健油特惠组 货号122944" src="../images/lunbo11.jpg@240w_240h" </a>
+                                            </div> <dl class="goods-info">
+                                        <dt><a href="/goods/5049" title="西王牌玉米胚芽保健油特惠组 货号122944"
+                                                target="_blank">西王牌玉米胚芽保健油特惠组 货号122944</a></dt>
+                                        <span class="yuan">￥</span><span class="integer">399</span><span
+                                            class="pointer">.</span><span class="decimal">00</span>
+                                        </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bx-controls bx-has-pager bx-has-controls-direction">
+                        <div class="bx-pager bx-default-pager">
+                            <div class="bx-pager-item"><a href="" data-slide-index="0"
+                                    class="bx-pager-link active">1</a></div>
+                            <div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div>
+                        </div>
+                        <div class="bx-controls-direction"><a class="bx-prev disabled" href="javascript:;"
+                                style="display: none;">&lt;</a><a class="bx-next" href="javascript:;"
+                                style="display: none;">&gt;</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的足迹E -->
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+        <div class="wrapper">
+            <p><a href="ind.html">首页</a>
+                | <a target="_blank" href="https://www.cnrmall.com/article/list/199093">招商合作</a> | <a target="_blank"
+                    href="https://www.cnrmall.com/article/info/22">关于央广购物</a> | <a target="_blank"
+                    href="https://www.cnrmall.com/article/info/175304">联系我们</a>
+                | <a target="_blank" href="http://scm.cnrmall.com/veninfo/venlogin/index.jsp">成为供应商</a>
+            </p>
+            <p>京公网安备：11011502002190&nbsp;&nbsp;<a target="_blank"
+                    href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备19000295号</a>&nbsp;&nbsp;<a
+                    target="_blank" href="javascript:;">食品流通许可证编号：SP1101151210063489</a>&nbsp;&nbsp;
+                <a target="_blank" href="javascript:;">信息网络传播视听节目许可证 0102002号</a>&nbsp;&nbsp;<a target="_blank"
+                    href="https://cnr-xiaopin.oss-cn-beijing.aliyuncs.com/certificate/%E5%89%AF%E6%9C%AC.jpg">营业执照</a>
+            </p>
+            <p>Copyright<em style="font-family:Arial,Verdana; margin:0 4px">©</em>2010-2019 cnrmall.com All Rights
+                Reserved&nbsp;&nbsp;&nbsp;&nbsp;服务热线：4008-518-518</p>
+            <!--Copyright © 2018 央广小品,All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;京ICP备10038858号 京公网安备：11011502002190 服务热线：4008-518-518<br />-->
+            <!--Powered by <span style="font-weight: 600;"><font style="color:orange;">Cnrmall.com</font><font style="color:blue;"></font></span><br />-->
+
+            <span id="cnzz_stat_icon_1260731735"></span>
+
+
+            <!-- <script>
+                var _hmt = _hmt || [];
+                (function () {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?905123a113c36971dd79389429636f4c";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script> -->
+            <ul class="footer-img">
+                <li><a class="img01" href="javascript:;"></a></li>
+                <li>
+                    <!-- <script src="https://kxlogo.knet.cn/seallogo.dll?sn=e16110811011565130ecka000000&amp;size=0"></script> -->
+                    <span style="display:inline-block;position:relative;width:auto;">
+                        <a href="https://ss.knet.cn/verifyseal.dll?sn=e16110811011565130ecka000000&amp;ct=df&amp;a=1&amp;pa=0.8130624962005342"
+                            id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;">
+                            <img src="https://ss.knet.cn/static/images/logo/cnnic.png" style="border:none;"
+                                oncontextmenu="return false;" alt="可信网站">
+                        </a>
+                    </span>
+                </li>
+                <li><a id="___szfw_logo___" href="https://credit.szfw.org/CX63030000051620161107.html"
+                        target="_blank"><img src="http://icon.szfw.org/cert.png" border="0"></a></li>
+                <li><a class="img05" href="http://www.bj.cyberpolice.cn/index.do" target="_blank"></a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

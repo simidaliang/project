@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/commomstyle.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/goodslist.css">
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/ind.js"></script>
+    <script src="../js/erjinav.js"></script>
+    <script src="../js/goodslist.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="public-top-layout">
+        <div class="topbar wrapper">
+            <div class="left">
+                <div class="mall-home"><a href="/"><span class="icon"></span>返回商城首页</a></div>
+                <!-- s 配送至-->
+                <div class="my-city" id="shortCutMyCityPanel"><a href="javascript:;" class="area"><span
+                            class="icon"></span><span id="shortCutAreaName" title="广东省" data-id="19">广东省</span>
+                        <i></i></a>
+                    <div id="shortCutAreaList" class="area-list"><a href="javascript:;" data-deep="1"
+                            data-id="1">北京市</a><a href="javascript:;" data-deep="1" data-id="2">天津市</a><a
+                            href="javascript:;" data-deep="1" data-id="3">河北省</a><a href="javascript:;" data-deep="1"
+                            data-id="4">山西省</a><a href="javascript:;" data-deep="1" data-id="5">内蒙古自治区</a><a
+                            href="javascript:;" data-deep="1" data-id="6">辽宁省</a><a href="javascript:;" data-deep="1"
+                            data-id="7">吉林省</a><a href="javascript:;" data-deep="1" data-id="8">黑龙江省</a><a
+                            href="javascript:;" data-deep="1" data-id="9">上海市</a><a href="javascript:;" data-deep="1"
+                            data-id="10">江苏省</a><a href="javascript:;" data-deep="1" data-id="11">浙江省</a><a
+                            href="javascript:;" data-deep="1" data-id="12">安徽省</a><a href="javascript:;" data-deep="1"
+                            data-id="13">福建省</a><a href="javascript:;" data-deep="1" data-id="14">江西省</a><a
+                            href="javascript:;" data-deep="1" data-id="15">山东省</a><a href="javascript:;" data-deep="1"
+                            data-id="16">河南省</a><a href="javascript:;" data-deep="1" data-id="17">湖北省</a><a
+                            href="javascript:;" data-deep="1" data-id="18">湖南省</a><a href="javascript:;" data-deep="1"
+                            data-id="19" class="selected">广东省</a><a href="javascript:;" data-deep="1"
+                            data-id="20">广西壮族自治区</a><a href="javascript:;" data-deep="1" data-id="21">海南省</a><a
+                            href="javascript:;" data-deep="1" data-id="22">重庆市</a><a href="javascript:;" data-deep="1"
+                            data-id="23">四川省</a><a href="javascript:;" data-deep="1" data-id="24">贵州省</a><a
+                            href="javascript:;" data-deep="1" data-id="25">云南省</a><a href="javascript:;" data-deep="1"
+                            data-id="26">西藏自治区</a><a href="javascript:;" data-deep="1" data-id="27">陕西省</a><a
+                            href="javascript:;" data-deep="1" data-id="28">甘肃省</a><a href="javascript:;" data-deep="1"
+                            data-id="29">青海省</a><a href="javascript:;" data-deep="1" data-id="30">宁夏回族自治区</a><a
+                            href="javascript:;" data-deep="1" data-id="31">新疆维吾尔自治区</a><a href="javascript:;"
+                            data-deep="1" data-id="32">台湾省</a><a href="javascript:;" data-deep="1"
+                            data-id="33">香港特别行政区</a><a href="javascript:;" data-deep="1" data-id="34">澳门特别行政区</a><a
+                            href="javascript:;" data-deep="1" data-id="35">海外</a></div>
+                </div>
+                <!-- E 配送至-->
+            </div>
+            <div class="right" id="quickMenu">
+                <dl class="top-menu login">
+                    <dt class="top-menu-title normal"><a href="html/login.html" class="login-link">您好，请登录</a> <a
+                            href="html/register.html">免费注册</a></dt>
+                </dl>
+                <dl class="top-menu my-order">
+                    <dt class="top-menu-title"><a target="_blank" href="/member/orders/list">我的订单</a><span
+                            class="arrow"></span></dt>
+                    <dd class="top-menu-con">
+                        <ul>
+                            <li><a target="_blank" href="/member/orders/list/?ordersState=new">待支付</a></li>
+                            <li><a target="_blank" href="/member/orders/list/?ordersState=send">待确认</a></li>
+                            <li><a target="_blank" href="/member/orders/list/?ordersState=noeval">待评价</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu my-mall">
+                    <dt class="top-menu-title"><a target="_blank" href="/member/">我的商城</a><span class="arrow"></span>
+                    </dt>
+                    <dd class="top-menu-con">
+                        <ul class="user-centent-menu">
+                            <li><a href="/member/message/list" target="_top">站内消息</a></li>
+                            <li><a href="/member/consult/list" target="_top">咨询回复</a></li>
+                            <li><a href="/member/favorites/goods" target="_top">我的收藏</a></li>
+                            <li><a href="/member/goodsbrowse" target="_top">我的足迹</a></li>
+                            <li><a href="/member/pointslog" target="_top">我的积分</a></li>
+                            <li><a href="/member/voucher/index" target="_top">我的优惠券</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu call-center">
+                    <dt class="top-menu-title">客户服务<span class="arrow"></span></dt>
+                    <dd class="top-menu-con">
+                        <ul>
+                            <li><a target="_blank" href="https://www1.cnrmall.com/article/list/11">购物指南</a></li>
+                            <li><a target="_blank" href="https://www1.cnrmall.com/article/list/15">售后服务</a></li>
+                            <li><a target="_blank" href="https://www1.cnrmall.com/article/list/12">商家服务</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu mobile-mall">
+                    <dt class="top-menu-title"><span class="icon"></span>手机商城<span class="arrow"></span></dt>
+                    <dd class="top-menu-con" style="width: 140px"> <span class="QRcode"> <img
+                                src="https://pic.cnrmall.com/qr/app/url.gif">
+                            <p>扫描二维码<br>
+                                更多优惠关注微信公众号</p>
+                        </span> </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- logo -->
+    <div class="header-wrap">
+        <header class="public-head-layout wrapper">
+            <h1 class="site-logo"><a href="/"><img
+                        src="https://pic5.cnrmall.com/image/2c/6c/2c6ce4ec89967ee42ef77fb0b524fc0c.png" alt=""></a></h1>
+
+            <div class="head-search-layout">
+                <div class="head-search-tab" id="searchTab">
+                    <span style="display: none;"><a href="javascript:;" class="selected" data-sign="goods"
+                            style="color: #212121;">商品</a></span>
+                    <span style="display: none;"><a href="javascript:;" class="" data-sign="store">店铺</a></span>
+                    <!--<span><a href="javascript:;" class="" data-sign="purchase">求购</a></span> -->
+                </div>
+                <div class="head-search-bar" id="head-search-bar">
+                    <form action="/search" method="get" class="search-form" id="headerSearchForm">
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input
+                            name="keyword" id="keyword" type="text" class="input-text ui-autocomplete-input" value=""
+                            maxlength="60" placeholder=" 请输入您要搜索的商品关键字" autocomplete="off">
+                        <input type="submit" id="buttonSearch" value="搜 索" class="input-submit">
+                    </form>
+                    <!-- 搜索提示div 开始 -->
+                    <div class="search-tip" id="search-tip">
+                        <div class="search-history">
+                            <div class="title">历史纪录<a href="javascript:void(0);" id="search-his-del">清除</a></div>
+                            <ul id="search-his-list">
+                            </ul>
+                        </div>
+                        <div class="search-hot">
+                            <div class="title">热门搜索...</div>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 搜索提示div 结束 -->
+                </div>
+                <div class="keyword">热门关键字：
+                    <ul>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E8%BD%AF%E6%8A%BD%E7%BA%B8">软抽纸</a></li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E5%86%9C%E5%9E%A6">农垦</a></li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E9%BB%84%E9%87%91%E7%9A%AE%E8%9B%8B">黄金皮蛋</a>
+                        </li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E8%8A%B1%E5%8D%B0">花印</a></li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E7%8E%AB%E7%91%B0%E9%A6%99%E6%A9%99">玫瑰香橙</a>
+                        </li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E6%96%B9%E5%AE%B6%E9%93%BA%E5%AD%90">方家铺子</a>
+                        </li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E9%A3%9E%E7%A7%91">飞科</a></li>
+                        <li><a target="_blank"
+                                href="/search?&amp;keyword=%E8%97%8F%E8%9C%9C%E7%89%8C%E9%87%8E%E8%8A%B1%E8%9C%9C">藏蜜牌野花蜜</a>
+                        </li>
+                        <li><a target="_blank" href="/search?&amp;keyword=%E7%A7%8B%E6%9C%A8%E8%80%B3">秋木耳</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 头部购物车_Star -->
+            <div id="topMyCart" class="my-cart">
+                <div class="my-cart-tit"><i class="my-cart-ico"></i><i data-red-point="" style="display: none;"
+                        class="my-cart-count"></i><a target="_blank" href="javascript:;" title="购物车">我的购物车</a></div>
+                <div class="my-cart-con">
+                    <div class="spacer"></div>
+                    <div class="sub-title">
+                        <h4>最新加入的商品</h4>
+                    </div>
+                    <div class="incart-goods-box ps-container">
+                        <div class="incart-goods" data-cart-goods-list="">
+                            <div class="no-order"><span>您的购物车中暂无商品，赶快选择心爱的商品吧！</span></div>
+                        </div>
+                        <div class="ps-scrollbar-x-rail" style="width: 308px; display: none; left: 0px; bottom: 3px;">
+                            <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+                        </div>
+                        <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; display: none; right: 3px;">
+                            <div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+                        </div>
+                    </div>
+                    <div class="checkout" data-goods-price="" style="display: none;"></div>
+                </div>
+            </div>
+            <!-- 头部购物车_End -->
+        </header>
+    </div>
+
+
+    <!-- nav -->
+    <nav class="public-nav-layout" id="public-nav-layout">
+        <div class="wrapper">
+            <div class="all-category">
+                <div class="title">
+                    <h3><a target="_blank" href="/category">所有商品分类</a></h3>
+                    <i class="arrow-down"></i>
+                </div>
+                <div class="min-title"><a target="_blank" href="/category">全部分类</a><span class="arrow-down"></span>
+                </div>
+                <div id="topCategoryMenu" class="category">
+                    <ul class="menu">
+                        <!--<li cat_menu_id="2" class="odd">-->
+                        <li cat_menu_id="2" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=19">休闲食品</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=22">即食罐头</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="2">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=20">休闲小食<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=26">膨化糕饼</a> <a target="_blank"
+                                                    href="/search?cat=27">坚果炒货</a> <a target="_blank"
+                                                    href="/search?cat=28">蜜饯糖果</a>
+                                                <a target="_blank" href="/search?cat=29">熟食肉干</a> <a target="_blank"
+                                                    href="/search?cat=30">其它休闲食品</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=21">粮油副食<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=31">大米</a> <a target="_blank"
+                                                    href="/search?cat=32">面粉</a>
+                                                <a target="_blank" href="/search?cat=33">食用油</a> <a target="_blank"
+                                                    href="/search?cat=34">杂粮</a> <a target="_blank"
+                                                    href="/search?cat=35">粮油制品</a>
+                                                <a target="_blank" href="/search?cat=36">副食调料</a> <a target="_blank"
+                                                    href="/search?cat=37">其它粮油副食</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=22">即食罐头<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=38">水果罐头</a> <a target="_blank"
+                                                    href="/search?cat=39">鱼类罐头</a> <a target="_blank"
+                                                    href="/search?cat=40">肉类罐头</a>
+                                                <a target="_blank" href="/search?cat=41">蔬菜类罐头</a> <a target="_blank"
+                                                    href="/search?cat=42">滋补类罐头</a> <a target="_blank"
+                                                    href="/search?cat=43">其他罐头</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=23">方便食品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=44">方便面/粉/粥</a> <a target="_blank"
+                                                    href="/search?cat=45">自热盒饭</a> <a target="_blank"
+                                                    href="/search?cat=46">烘培速食</a>
+                                                <a target="_blank" href="/search?cat=47">即食调味菜</a> <a target="_blank"
+                                                    href="/search?cat=48">其他方便食品</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=20" target="_blank"> <img
+                                                src="https://pic.cnrmall.com/image/43/8a/438a8473467e0ac9c94fa7384ae14699.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=21" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/53/77/537797f530e7ce2bff99cc4ba1720c69.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=22" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/49/0a/490a8253d2a111c6aab75a5182c087b4.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="3" class="even">-->
+                        <li cat_menu_id="3" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=109">水果 </a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=103">水产</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=118">精选肉类</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="3">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=109">水果<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=110">国产水果</a> <a target="_blank"
+                                                    href="/search?cat=113">进口水果</a> <a target="_blank"
+                                                    href="/search?cat=115">其他水果</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=103">水产<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=104">海参</a> <a target="_blank"
+                                                    href="/search?cat=105">鱼虾</a> <a target="_blank"
+                                                    href="/search?cat=106">鲍/贝</a>
+                                                <a target="_blank" href="/search?cat=108">其他水产</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=118">禽蛋肉<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=120">鲜蛋</a> <a target="_blank"
+                                                    href="/search?cat=122">猪肉</a> <a target="_blank"
+                                                    href="/search?cat=124">牛肉</a>
+                                                <a target="_blank" href="/search?cat=126">羊肉</a> <a target="_blank"
+                                                    href="/search?cat=128">鸡肉</a> <a target="_blank"
+                                                    href="/search?cat=130">鸭肉</a>
+                                                <a target="_blank" href="/search?cat=133">其他禽蛋肉</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=109" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/e7/b6/e7b6a48e76f0759c9f54ffdf49b3ad6b.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/goods/6411" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/97/3e/973e89c0e895ff7a6fbb1a4ec0f7690b.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=103" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/a8/83/a883eee835e8e195158323817018e694.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="4" class="odd">-->
+                        <li cat_menu_id="4" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=4">茗茶</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=2"> 酒类</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=24">冲调茶饮</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="4">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=2">中外名酒<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=5">红酒</a> <a target="_blank"
+                                                    href="/search?cat=6">白酒</a>
+                                                <a target="_blank" href="/search?cat=7">洋酒</a> <a target="_blank"
+                                                    href="/search?cat=8">啤酒</a>
+                                                <a target="_blank" href="/search?cat=9">保健酒</a> <a target="_blank"
+                                                    href="/search?cat=3">其他酒</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=4">茶叶/茶包<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=10">红茶</a> <a target="_blank"
+                                                    href="/search?cat=11">绿茶</a>
+                                                <a target="_blank" href="/search?cat=12">花茶</a> <a target="_blank"
+                                                    href="/search?cat=13">普洱</a>
+                                                <a target="_blank" href="/search?cat=14">黑茶/白茶</a> <a target="_blank"
+                                                    href="/search?cat=15">铁观音</a> <a target="_blank"
+                                                    href="/search?cat=16">花草花果茶</a>
+                                                <a target="_blank" href="/search?cat=17">养生茶/片</a> <a target="_blank"
+                                                    href="/search?cat=18">其他茶类</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=24">冲调粉茶<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=49">成人奶粉</a> <a target="_blank"
+                                                    href="/search?cat=50">茶粉</a> <a target="_blank"
+                                                    href="/search?cat=51">蜂蜜</a>
+                                                <a target="_blank" href="/search?cat=52">咖啡</a> <a target="_blank"
+                                                    href="/search?cat=53">麦片</a>
+                                                <a target="_blank" href="/search?cat=54">代餐/谷粉</a> <a target="_blank"
+                                                    href="/search?cat=55">红糖/黑糖/冰糖</a> <a target="_blank"
+                                                    href="/search?cat=64">其他冲饮</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=25">牛奶/饮料<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=57">水</a> <a target="_blank"
+                                                    href="/search?cat=58">牛奶</a>
+                                                <a target="_blank" href="/search?cat=59">果汁</a> <a target="_blank"
+                                                    href="/search?cat=60">碳酸饮料</a>
+                                                <a target="_blank" href="/search?cat=61">茶饮料</a> <a target="_blank"
+                                                    href="/search?cat=62">功能饮料</a> <a target="_blank"
+                                                    href="/search?cat=63">蛋白质饮料</a>
+                                                <a target="_blank" href="/search?cat=64">其他饮料</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=4" target="_blank"> <img
+                                                src="https://pic.cnrmall.com/image/26/b4/26b413c4a4ddb9795c4bb839d458aee6.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=2" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/e7/37/e737125a302a001967d2101232a30c10.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=24" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/dc/84/dc84fb8e4ee095889d7b6737428404c5.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="5" class="even">-->
+                        <li cat_menu_id="5" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=66">传统滋补</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=67">营养健康</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="5" style="display: none; top: 0px;">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=66">传统滋补<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=69">参/海参</a> <a target="_blank"
+                                                    href="/search?cat=70">燕窝</a> <a target="_blank"
+                                                    href="/search?cat=71">阿胶</a>
+                                                <a target="_blank" href="/search?cat=72">石斛/枫斗</a> <a target="_blank"
+                                                    href="/search?cat=73">灵芝孢子粉</a> <a target="_blank"
+                                                    href="/search?cat=74">枸杞/银耳/莲子</a>
+                                                <a target="_blank" href="/search?cat=75">葛根</a> <a target="_blank"
+                                                    href="/search?cat=76">鹿茸</a>
+                                                <a target="_blank" href="/search?cat=77">当归/黄芪</a> <a target="_blank"
+                                                    href="/search?cat=78">藏红花</a> <a target="_blank"
+                                                    href="/search?cat=79">虫草</a>
+                                                <a target="_blank" href="/search?cat=80">其他传统滋补</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=67">营养健康<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=81">维生素</a> <a target="_blank"
+                                                    href="/search?cat=82">鱼油/磷脂</a> <a target="_blank"
+                                                    href="/search?cat=83">螺旋藻</a>
+                                                <a target="_blank" href="/search?cat=84">番茄红素</a> <a target="_blank"
+                                                    href="/search?cat=85">胶原蛋白</a> <a target="_blank"
+                                                    href="/search?cat=86">蛋白质</a>
+                                                <a target="_blank" href="/search?cat=87">酵素</a> <a target="_blank"
+                                                    href="/search?cat=88">辅酶Q10</a>
+                                                <a target="_blank" href="/search?cat=89">葡萄籽</a> <a target="_blank"
+                                                    href="/search?cat=90">芹菜籽</a> <a target="_blank"
+                                                    href="/search?cat=91">叶黄素/叶绿素</a>
+                                                <a target="_blank" href="/search?cat=93">膳食纤维</a> <a target="_blank"
+                                                    href="/search?cat=94">大豆异黄酮</a> <a target="_blank"
+                                                    href="/search?cat=95">芦荟</a>
+                                                <a target="_blank" href="/search?cat=96">褪黑素</a> <a target="_blank"
+                                                    href="/search?cat=97">虾青素</a> <a target="_blank"
+                                                    href="/search?cat=98">益生菌</a>
+                                                <a target="_blank" href="/search?cat=99">健肌粉</a> <a target="_blank"
+                                                    href="/search?cat=100">叶酸片</a> <a target="_blank"
+                                                    href="/search?cat=101">牛初乳</a>
+                                                <a target="_blank" href="/search?cat=107">其他营养成分</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=66" target="_blank"> <img
+                                                src="https://pic.cnrmall.com/image/ac/71/ac7103ef2fe28d9e523d1affd4063fce.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/goods/6282" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/f9/41/f9419097a43e5cd4a7e39593f3801b7b.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=67" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/37/2f/372f40fb0d5224c9baa2f66c23142a4d.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="6" class="odd">-->
+                        <li cat_menu_id="6" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=135">跨境直邮</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=68">保健食品</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="6">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=136">跨境食品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=137">休闲食品</a> <a target="_blank"
+                                                    href="/search?cat=138">保健食品</a> <a target="_blank"
+                                                    href="/search?cat=140">烘培调味</a>
+                                                <a target="_blank" href="/search?cat=409">水果肉禽</a> <a target="_blank"
+                                                    href="/search?cat=410">蔬菜水产</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=147">跨境美妆<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=188">面部护理</a> <a target="_blank"
+                                                    href="/search?cat=189">身体护理</a> <a target="_blank"
+                                                    href="/search?cat=191">时尚彩妆</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=149">跨境服饰<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=181">男装</a> <a target="_blank"
+                                                    href="/search?cat=184">女装</a> <a target="_blank"
+                                                    href="/search?cat=186">配饰</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=151">跨境母婴<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=162">喂养用品</a> <a target="_blank"
+                                                    href="/search?cat=164">奶粉</a> <a target="_blank"
+                                                    href="/search?cat=166">尿裤湿巾</a>
+                                                <a target="_blank" href="/search?cat=168">保健辅食</a> <a target="_blank"
+                                                    href="/search?cat=170">婴童洗护</a> <a target="_blank"
+                                                    href="/search?cat=172">跨境卫生巾</a>
+                                                <a target="_blank" href="/search?cat=174">婴童寝具</a> <a target="_blank"
+                                                    href="/search?cat=175">童装童鞋</a> <a target="_blank"
+                                                    href="/search?cat=177">早教玩具</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=152">跨境家居<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=153">纺织家饰</a> <a target="_blank"
+                                                    href="/search?cat=155">个护清洁</a> <a target="_blank"
+                                                    href="/search?cat=157">收纳用品</a>
+                                                <a target="_blank" href="/search?cat=159">3C数码</a> <a target="_blank"
+                                                    href="/search?cat=160">生活电器</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=68">保健食品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=111">美容养颜</a> <a target="_blank"
+                                                    href="/search?cat=112">增强免疫</a> <a target="_blank"
+                                                    href="/search?cat=114">调节三高</a>
+                                                <a target="_blank" href="/search?cat=116">养胃护肝</a> <a target="_blank"
+                                                    href="/search?cat=117">强身健骨</a> <a target="_blank"
+                                                    href="/search?cat=119">补肾健脾</a>
+                                                <a target="_blank" href="/search?cat=121">改善睡眠</a> <a target="_blank"
+                                                    href="/search?cat=123">减肥塑身</a> <a target="_blank"
+                                                    href="/search?cat=125">缓解疲劳</a>
+                                                <a target="_blank" href="/search?cat=127">明目益智</a> <a target="_blank"
+                                                    href="/search?cat=129">防辐射</a> <a target="_blank"
+                                                    href="/search?cat=131">其他保健品</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=136" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/da/14/da146b1ab2064a4e05abda5287b1d0df.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/goods/6193" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/b8/0c/b80c5adf511f571d1eb913323be0ca24.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=68" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/a7/74/a774f3614b1a15c0ac16362c32e37511.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="7" class="even">-->
+                        <li cat_menu_id="7" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=257">厨房用具</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=260"> 厨房电器</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="7">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=259">厨房用品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=261">烹饪锅具</a> <a target="_blank"
+                                                    href="/search?cat=262">厨房配件</a> <a target="_blank"
+                                                    href="/search?cat=263">餐具</a>
+                                                <a target="_blank" href="/search?cat=265">水具酒具</a> <a target="_blank"
+                                                    href="/search?cat=267">其他厨房用品</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=260">厨房电器<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=270">厨卫大电器</a> <a target="_blank"
+                                                    href="/search?cat=272">厨房小电器</a> <a target="_blank"
+                                                    href="/search?cat=267">其他厨房电器</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=270" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/fb/33/fb33c2d5198c5a38771a99fb4ff3eb2c.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=261" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/51/cc/51cccb4f55c11d1aed8bff451b92ac2b.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=272" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/43/17/431739ad8f09eca654b6ec24bce3f122.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="8" class="odd">-->
+                        <li cat_menu_id="8" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=222">家居</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=221">家纺</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=397">家装卫浴</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="8">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=221">布艺家纺<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=224">床品件套</a> <a target="_blank"
+                                                    href="/search?cat=225">床垫床褥</a> <a target="_blank"
+                                                    href="/search?cat=227">沙发套垫</a>
+                                                <a target="_blank" href="/search?cat=228">毛巾浴巾</a> <a target="_blank"
+                                                    href="/search?cat=230">其他家纺</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=222">创意家居<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=233">整理收纳</a> <a target="_blank"
+                                                    href="/search?cat=234">地毯地垫</a> <a target="_blank"
+                                                    href="/search?cat=236">创意摆件</a>
+                                                <a target="_blank" href="/search?cat=238">餐桌布艺</a> <a target="_blank"
+                                                    href="/search?cat=239">抱枕靠垫</a> <a target="_blank"
+                                                    href="/search?cat=241">窗帘窗纱</a>
+                                                <a target="_blank" href="/search?cat=243">婚庆节庆</a> <a target="_blank"
+                                                    href="/search?cat=244">家具</a> <a target="_blank"
+                                                    href="/search?cat=246">其他创意家居</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=223">灯饰照明<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=249">装修灯具</a> <a target="_blank"
+                                                    href="/search?cat=250">装饰灯具</a> <a target="_blank"
+                                                    href="/search?cat=252">其他灯饰照明</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=397">家装卫浴<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=399">水龙头</a> <a target="_blank"
+                                                    href="/search?cat=400">马桶盖</a> <a target="_blank"
+                                                    href="/search?cat=401">淋浴花洒</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=221" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/b3/a4/b3a40d258d348dd395912165029759ff.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=222" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/a7/de/a7def9f57e92984f2e8a7aea4a1d2cd0.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=397" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/24/f3/24f3453853a36b673c8e6b117016c981.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="9" class="even">-->
+                        <li cat_menu_id="9" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=285">生活电器</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=287">3C数码</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="9">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=283">大家电<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=290">电视</a> <a target="_blank"
+                                                    href="/search?cat=293">冰箱</a> <a target="_blank"
+                                                    href="/search?cat=294">空调</a>
+                                                <a target="_blank" href="/search?cat=296">洗衣机</a> <a target="_blank"
+                                                    href="/search?cat=298">其他大家电</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=285">生活电器<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=299">净化保暖</a> <a target="_blank"
+                                                    href="/search?cat=300">打扫用品</a> <a target="_blank"
+                                                    href="/search?cat=301">个人护理</a>
+                                                <a target="_blank" href="/search?cat=302">其他生活电器</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=287">3C数码<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=304">手机</a> <a target="_blank"
+                                                    href="/search?cat=305">相机</a> <a target="_blank"
+                                                    href="/search?cat=307">电脑</a>
+                                                <a target="_blank" href="/search?cat=309">智能手表</a> <a target="_blank"
+                                                    href="/search?cat=311">数码配件</a> <a target="_blank"
+                                                    href="/search?cat=313">其他3C数码</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/goods/6391" target="_blank"> <img
+                                                src="https://pic.cnrmall.com/image/02/86/0286dee8414537d0a19b6f17c2995b0b.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=283" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/1f/60/1f60c133b9516407f43278acd348b01b.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=285" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/bd/de/bddee3ca0c707baa771586cea6380d13.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="10" class="odd">-->
+                        <li cat_menu_id="10" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=203">珠宝配饰</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=245">时尚钟表</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="10">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=204">珠宝饰品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=205">翡翠玉石</a> <a target="_blank"
+                                                    href="/search?cat=206">水晶玛瑙</a> <a target="_blank"
+                                                    href="/search?cat=207">钻石财宝</a>
+                                                <a target="_blank" href="/search?cat=208">珍珠</a> <a target="_blank"
+                                                    href="/search?cat=209">其他珠宝饰品</a> <a target="_blank"
+                                                    href="/search?cat=395">琥珀蜜蜡</a>
+                                                <a target="_blank" href="/search?cat=396">珊瑚</a> <a target="_blank"
+                                                    href="/search?cat=402">猛犸象牙</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=245">钟表文玩<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=247">手串把件</a> <a target="_blank"
+                                                    href="/search?cat=248">手表/座钟</a> <a target="_blank"
+                                                    href="/search?cat=251">其他钟表文玩</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=253">时尚配饰<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=254">一般饰品</a> <a target="_blank"
+                                                    href="/search?cat=258">其他时尚配饰</a> <a target="_blank"
+                                                    href="/search?cat=411">墨镜</a>
+                                                <a target="_blank" href="/search?cat=412">腰带</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=204" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/76/96/769678ec4b7e6eb88e01fd25856ddfb3.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=253" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/28/dd/28dd43dc02158b38c3beb482e7a53502.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=248" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/d9/5b/d95bd1c612812bf3a5c35d8c7a3f5e2c.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="11" class="even">-->
+                        <li cat_menu_id="11" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=266">服饰内衣</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=266">鞋靴</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=286">箱包</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="11">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=266">服装鞋靴<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=268">男士内衣</a> <a target="_blank"
+                                                    href="/search?cat=269">女士内衣</a> <a target="_blank"
+                                                    href="/search?cat=271">男女袜子</a>
+                                                <a target="_blank" href="/search?cat=273">家居服</a> <a target="_blank"
+                                                    href="/search?cat=275">塑身内衣</a> <a target="_blank"
+                                                    href="/search?cat=276">保暖内衣</a>
+                                                <a target="_blank" href="/search?cat=277">男装</a> <a target="_blank"
+                                                    href="/search?cat=278">女装</a> <a target="_blank"
+                                                    href="/search?cat=279">男鞋</a>
+                                                <a target="_blank" href="/search?cat=280">女鞋</a> <a target="_blank"
+                                                    href="/search?cat=282">帽子</a> <a target="_blank"
+                                                    href="/search?cat=298">配饰</a>
+                                                <a target="_blank" href="/search?cat=284">其他服装鞋帽</a> <a target="_blank"
+                                                    href="/search?cat=403">童装服饰</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=286">箱包<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=288">男士包</a> <a target="_blank"
+                                                    href="/search?cat=289">女士包</a> <a target="_blank"
+                                                    href="/search?cat=291">学生书包</a>
+                                                <a target="_blank" href="/search?cat=292">钱包/卡包</a> <a target="_blank"
+                                                    href="/search?cat=295">拉杆箱</a> <a target="_blank"
+                                                    href="/search?cat=297">其他箱包</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=266" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/f4/df/f4dfc91e7cc983cf964671425be82848.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=269" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/5f/7d/5f7d7590c854a12d0f63cde93914f777.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=280" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/55/66/556609cf6e39f08ace7a4c70d769bf40.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="12" class="odd">-->
+                        <li cat_menu_id="12" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=351">美妆身体</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=154">个护清洁</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="12">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=353">面部护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=354">洁面</a> <a target="_blank"
+                                                    href="/search?cat=355">化妆水</a> <a target="_blank"
+                                                    href="/search?cat=356">乳液/面霜</a>
+                                                <a target="_blank" href="/search?cat=357">精华/肌底</a> <a target="_blank"
+                                                    href="/search?cat=359">眼霜</a> <a target="_blank"
+                                                    href="/search?cat=360">面膜/眼膜</a>
+                                                <a target="_blank" href="/search?cat=363">润唇膏/膜</a> <a target="_blank"
+                                                    href="/search?cat=373">防晒</a> <a target="_blank"
+                                                    href="/search?cat=374">卸妆</a>
+                                                <a target="_blank" href="/search?cat=375">护肤套装</a> <a target="_blank"
+                                                    href="/search?cat=376">男士护肤</a> <a target="_blank"
+                                                    href="/search?cat=378">其他面部护理</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=379">身体护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=380">沐浴清洁</a> <a target="_blank"
+                                                    href="/search?cat=381">身体护理</a> <a target="_blank"
+                                                    href="/search?cat=382">手部护理</a>
+                                                <a target="_blank" href="/search?cat=383">足部护理</a> <a target="_blank"
+                                                    href="/search?cat=384">头部清洁</a> <a target="_blank"
+                                                    href="/search?cat=385">头部护理</a>
+                                                <a target="_blank" href="/search?cat=386">其他个人护理</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=387">美发护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=388">染发</a> <a target="_blank"
+                                                    href="/search?cat=389">烫发</a> <a target="_blank"
+                                                    href="/search?cat=390">男女假发</a>
+                                                <a target="_blank" href="/search?cat=391">定型美发</a> <a target="_blank"
+                                                    href="/search?cat=392">发质护理</a> <a target="_blank"
+                                                    href="/search?cat=393">其他美发护理</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=156">女性护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=163">卫生巾</a> <a target="_blank"
+                                                    href="/search?cat=165">卫生护垫</a> <a target="_blank"
+                                                    href="/search?cat=167">成人纸尿裤</a>
+                                                <a target="_blank" href="/search?cat=169">其他卫生护理</a> <a target="_blank"
+                                                    href="/search?cat=171">私处护理</a> <a target="_blank"
+                                                    href="/search?cat=173">其他私处护理</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=158">衣物清洁<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=176">洗衣液</a> <a target="_blank"
+                                                    href="/search?cat=178">洗衣粉</a> <a target="_blank"
+                                                    href="/search?cat=179">洗衣皂</a>
+                                                <a target="_blank" href="/search?cat=180">洗衣凝珠</a> <a target="_blank"
+                                                    href="/search?cat=182">内衣清洁</a> <a target="_blank"
+                                                    href="/search?cat=183">衣物除菌液</a>
+                                                <a target="_blank" href="/search?cat=185">柔顺剂</a> <a target="_blank"
+                                                    href="/search?cat=187">其他衣物清洁</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=161">家庭清洁<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=190">餐具清洁</a> <a target="_blank"
+                                                    href="/search?cat=210">消毒剂/液</a> <a target="_blank"
+                                                    href="/search?cat=211">油污清洁</a>
+                                                <a target="_blank" href="/search?cat=212">地板护理</a> <a target="_blank"
+                                                    href="/search?cat=213">水垢清洁</a> <a target="_blank"
+                                                    href="/search?cat=214">干燥除湿/驱虫</a>
+                                                <a target="_blank" href="/search?cat=215">空气清新剂</a> <a target="_blank"
+                                                    href="/search?cat=216">马桶清洁</a> <a target="_blank"
+                                                    href="/search?cat=217">其他清洁用品</a>
+                                                <a target="_blank" href="/search?cat=218">皮革养护</a> <a target="_blank"
+                                                    href="/search?cat=219">其他家庭清洁</a> <a target="_blank"
+                                                    href="/search?cat=413">清洁工具</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=404">口腔护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=405">牙膏</a> <a target="_blank"
+                                                    href="/search?cat=406">牙刷</a> <a target="_blank"
+                                                    href="/search?cat=407">漱口水</a>
+                                                <a target="_blank" href="/search?cat=408">其他口腔护理</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=314">彩妆<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=315">面部彩妆</a> <a target="_blank"
+                                                    href="/search?cat=316">唇部彩妆</a> <a target="_blank"
+                                                    href="/search?cat=317">眼部彩妆</a>
+                                                <a target="_blank" href="/search?cat=318">美甲</a> <a target="_blank"
+                                                    href="/search?cat=319">彩妆工具</a> <a target="_blank"
+                                                    href="/search?cat=320">彩妆套装</a>
+                                                <a target="_blank" href="/search?cat=322">其他彩妆</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=306">香水<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=308">男士香水</a> <a target="_blank"
+                                                    href="/search?cat=310">女士香水</a> <a target="_blank"
+                                                    href="/search?cat=312">其他香水</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=353" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/a8/d0/a8d0eb7cb202d59a512d3c7cc3c845da.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=387" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/45/68/45688e2b55b11913c48c4223e734dc92.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/goods/5110" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/19/41/194130c6f0196144317e750b566f82fe.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="13" class="even">-->
+                        <li cat_menu_id="13" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=323">保健器材</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=324">养生仪器</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="13">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=323">保健器材<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=325">健身器材</a> <a target="_blank"
+                                                    href="/search?cat=326">按摩器材</a> <a target="_blank"
+                                                    href="/search?cat=327">矫正器材</a>
+                                                <a target="_blank" href="/search?cat=328">康复辅助</a> <a target="_blank"
+                                                    href="/search?cat=330">其他养生器材</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=324">保健仪器<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=332">日常护理</a> <a target="_blank"
+                                                    href="/search?cat=334">中医保健</a> <a target="_blank"
+                                                    href="/search?cat=336">理疗仪器</a>
+                                                <a target="_blank" href="/search?cat=338">频谱仪</a> <a target="_blank"
+                                                    href="/search?cat=352">其他保健仪器</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=324" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/40/77/40771ee8684fd4cd48e92d33106d0021.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/goods/6392" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/71/e9/71e956efed5a1798af7c5e13df6ce3a2.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=323" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/8c/f6/8cf68022dfb0ae74481529135f1eab49.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li cat_menu_id="14" class="odd">-->
+                        <li cat_menu_id="14" class="cate-menu-item">
+                            <div class="cate-menu-box">
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=226">金银质饰品</a><span
+                                    class="cate-menu-line">/</span>
+                                <a target="_blank" class="cate-menu-lk" href="/search?cat=394">字画收藏</a><span
+                                    class="cate-menu-line">/</span>
+                            </div>
+                            <div class="cate-part" cat_menu_id="14">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=226">金质饰品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=229">足金饰品</a> <a target="_blank"
+                                                    href="/search?cat=231">铂金/K金饰品</a> <a target="_blank"
+                                                    href="/search?cat=232">其他金质饰品</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=235">银质制品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=237">足银饰品</a> <a target="_blank"
+                                                    href="/search?cat=240">银合金饰品</a> <a target="_blank"
+                                                    href="/search?cat=242">其他银质饰品</a>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a target="_blank" href="/search?cat=245">钟表文玩<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a> </dt>
+                                            <dd class="cate-detail-con">
+                                                <a target="_blank" href="/search?cat=394">字画收藏</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <a title="" href="https://www1.cnrmall.com/search?cat=237" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/85/57/8557de5ddcd36b16281738d9c613d3d8.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=235" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/6d/7a/6d7ac31710c171e572b696a1a35ef1e6.jpg">
+                                        </a> <a title="" href="https://www1.cnrmall.com/search?cat=394" target="_blank">
+                                            <img
+                                                src="https://pic.cnrmall.com/image/04/83/048341bfd1608fc8b47e780e87135fb6.jpg">
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="site-menu">
+                <li><a href="/" class="current">首页</a></li>
+                <li><a target="_blank" href="/tv">TV直播</a></li>
+                <!-- <li><a target="_blank" href="/brand" >品牌</a></li>
+            <li><a target="_blank" href="/pointscenter/index" >积分中心</a></li>
+            <li><a target="_blank" href="/vouchercenter/index" >领券中心</a></li>
+            <li><a target="_blank" href="/trys" >试用</a></li>
+            <li><a target="_blank" href="/seckill" >秒杀</a></li>
+            <li>
+                <a target="_blank" href="/advertorial/article/list">推文</a>
+            </li> -->
+            </ul>
+            <!-- <div class="mobil-mall-ad"><img src="https://statics.cnrmall.com/web/static/img/top_app_c2hvcG5j.gif"/></div> -->
+        </div>
+    </nav>
+
+    <div class="wrapper nch-breadcrumb-layout">
+        <div class="nch-breadcrumb"> <span class="sort-box"> <a href="javascript:;" class="current">食品饮料<i
+                        class="drop-arrow"></i></a>
+                <div class="sort-sub">
+                    <ul>
+                        <li><a href="/search?cat=1">名酒茗茶</a></li>
+                        <li><a href="/search?cat=19">食品饮料</a></li>
+                        <li><a href="/search?cat=65">滋补养生</a></li>
+                        <li><a href="/search?cat=102">生鲜水果</a></li>
+                        <li><a href="/search?cat=135">跨境直邮</a></li>
+                        <li><a href="/search?cat=351">美妆身体</a></li>
+                        <li><a href="/search?cat=203">珠宝配饰</a></li>
+                        <li><a href="/search?cat=264">服饰箱包</a></li>
+                        <li><a href="/search?cat=220">家居家纺</a></li>
+                        <li><a href="/search?cat=281">家电数码</a></li>
+                        <li><a href="/search?cat=257">厨房厨电</a></li>
+                        <li><a href="/search?cat=321">养生保健</a></li>
+                        <li><a href="/search?cat=154">个护清洁</a></li>
+                        <li><a href="/search?cat=303">香水彩妆</a></li>
+                        <li><a href="/search?cat=329">母婴玩具</a></li>
+                        <li><a href="/search?cat=132">纸品湿巾</a></li>
+                        <li><a href="/search?cat=192">宠物生活</a></li>
+                        <li><a href="/search?cat=358">汽车户外</a></li>
+                        <li><a href="/search?cat=415">礼包</a></li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="selector wrapper">
+        <div class="title">
+            <h3><em>分类 - <strong class="c-danger f14">“食品饮料”</strong></em>筛选结果</h3>
+        </div>
+        <div class="content">
+            <dl goods-attr-item="">
+                <dt>包含分类：</dt>
+                <dd class="list attr-item">
+                    <ul>
+                        <li><a href="/search?cat=20">休闲小食</a></li>
+                        <li><a href="/search?cat=21">粮油副食</a></li>
+                        <li><a href="/search?cat=22">即食罐头</a></li>
+                        <li><a href="/search?cat=23">方便食品</a></li>
+                        <li><a href="/search?cat=24">冲调粉茶</a></li>
+                        <li><a href="/search?cat=25">牛奶/饮料</a></li>
+                        <li><a href="/search?cat=422">南北干货</a></li>
+                    </ul>
+                </dd>
+                <dd class="all" style="display: none" data-ext-more=""> <a href="javascript:;"><span>更多</span><i
+                            class="drop-arrow"></i></a> </dd>
+            </dl>
+            <!--s 品牌区域-->
+            <!--e 品牌区域-->
+            <!-- S 属性区域-->
+        </div>
+        <!-- E 属性区域-->
+    </div>
+
+    <!--  -->
+    <div class="QR-layout" id="main-nav-holder">
+        <nav class="sort-bar" id="main-nav">
+            <div class="pin"></div>
+            <div class="sort-bar-wrap top">
+
+                <div class="nch-sortbar-array">
+                    <ul class="screen">
+                        <li class="selected"><a href="###" title="默认排序">默认排序</a>
+                        </li>
+                        <li class="sortbydeal"><a href="###" title="点击按成交量从高到低排序">成交量</a>
+                        </li>
+                        <li class="sortbyprice"><a href="###" class="asc" title="点击按价格从低到高排序">价格<i></i></a>
+                        </li>
+                        <li class="sortbycontents"><a href="###" title="点击按人气从高到低排序">评论</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nch-sortbar-price fold" id="nchSortbarPrice">
+                    <div class="block">
+                        <input type="text" class="input-text" placeholder="￥" id="priceStart" value="">
+                        <span class="line">-</span>
+                        <input type="text" class="input-text" placeholder="￥" id="priceEnd" value="">
+                        <a href="javascript:;" class="btn" id="nchSortbarPriceBtn">确定</a>
+                    </div>
+                </div>
+                <div class="nch-sortbar-since fold" id="minBuyNumPanel">
+                    <div class="block">
+                        <div class="fl m-r-5">起购量</div>
+                        <input type="text" class="input-text" id="minBuyNum" maxlength="8"
+                            onkeyup="value=value.replace(/[^\d]/g,'')" value="">
+                        <div class="fl m-l-5">以下</div>
+                        <a href="javascript:;" class="btn" id="minBuyNumBtn">确定</a>
+                    </div>
+                </div>
+                <div class="nch-sortbar-filter">
+                    <div class="widget-label"><span class="widget-label-txt">
+
+                            经营类型 </span><i class="widget-label-arrow"></i></div>
+                    <div class="widget-layer">
+                        <ul>
+                            <li><a href="/search?cat=19&amp;own=1">平台自营</a></li>
+                            <li><a href="/search?cat=19&amp;own=0">三方店铺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nch-sortbar-filter">
+                    <div class="widget-label"><span class="widget-label-txt">
+
+
+
+                            促销活动 </span><i class="widget-label-arrow"></i></div>
+                    <div class="widget-layer">
+                        <ul>
+                            <li><a href="/search?cat=19&amp;promotion=1">限时折扣</a></li>
+                            <li><a href="/search?cat=19&amp;promotion=2">全款预售</a></li>
+                            <li><a href="/search?cat=19&amp;promotion=3">定金预售</a></li>
+                            <li><a href="/search?cat=19&amp;promotion=6">秒杀活动</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nch-sortbar-filter">
+                    <div class="widget-label"><span class="widget-label-txt">
+
+
+
+                            销售模式 </span><i class="widget-label-arrow"></i></div>
+                    <div class="widget-layer">
+                        <ul>
+                            <li><a href="/search?cat=19&amp;modal=1">零售型</a></li>
+                            <li><a href="/search?cat=19&amp;modal=2">批发型</a></li>
+                            <li><a href="/search?cat=19&amp;modal=3">虚拟型</a></li>
+                            <li><a href="/search?cat=19&amp;modal=4">海外型</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fold select-gift"> <span class=""><a class="gifts" href="###"><i class="input-gift"></i>
+                            赠品</a></span> </div>
+                <div class="fold select-gift"> <span class=""><a class="gifts" href="###"><i class="input-gift"></i>
+                            包邮</a></span> </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 商品 -->
+    <div class="nch-g-list wrapper">
+        <ul class="list_pic">
+
+
+        </ul>
+        <div class="pagination m-t-10 m-b-10 tr">
+            <ul class="pageqty">
+                <!-- <li><span>首页</span></li>
+                <li><span>上一页</span></li>
+                <li><span class="currentpage">1</span></li> -->
+                <li><a class="demo" href="###"><span>首页</span></a></li>
+                <li><a class="demo" href="###"><span>上一页</span></a></li>
+                <li><a href="###"><span class="currentpage">1</span></a></li>
+                <li><a class="demo" href="###"><span>2</span></a></li>
+                <li><a class="demo" href="###"><span>3</span></a></li>
+                <li><a class="demo" href="###"><span>4</span></a></li>
+                <li><a class="demo" href="###"><span>5</span></a></li>
+                <li><a class="demo" href="###"><span>下一页</span></a></li>
+                <li><a class="demo" href="###"><span>尾页</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 足跡 -->
+    <div id="browse_like_div" class="nc-goods-borowse">
+        <div class="nc-goods-browse-box">
+            <div class="of">
+                <div class="title cur" nctype="browseLikeTabItem" data-tab-type="goodsBrowse">
+                    <h3>我的足迹</h3>
+                </div>
+            </div>
+            <!-- 猜你喜欢S -->
+            <!-- 猜你喜欢E -->
+
+            <!-- 我的足迹S -->
+            <div id="goodsBrowseContent" class="content" style="z-index:1;">
+                <div class="bx-wrapper" style="max-width: 1170px;">
+                    <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 194px;">
+                        <ul id="goodsBrowseList" class="goods-list"
+                            style="width: 915%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/5676" target="_blank"> <img
+                                            alt="格林燕山栗子鸡秒杀组 货号123420"
+                                            src="https://pic3.cnrmall.com/image/b5/5a/b55a0cde48baeed0787d663d8bd2d59a.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/5676" title="格林燕山栗子鸡秒杀组 货号123420" target="_blank">格林燕山栗子鸡秒杀组
+                                            货号123420</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">184</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/20022" target="_blank"> <img
+                                            alt="叶朵去污吸水干湿两用抹布 货号125501"
+                                            src="https://pic5.cnrmall.com/image/21/73/2173f76f5177990780e4bfbbc02a2357.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/20022" title="叶朵去污吸水干湿两用抹布 货号125501"
+                                            target="_blank">叶朵去污吸水干湿两用抹布 货号125501</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">298</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/24164" target="_blank"> <img
+                                            alt="老洪祥18K金天然翠绿翡翠方牌 货号125557"
+                                            src="https://pic4.cnrmall.com/image/ca/ee/caee80f6767613f76fdb8f0174f01df4.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/24164" title="老洪祥18K金天然翠绿翡翠方牌 货号125557"
+                                            target="_blank">老洪祥18K金天然翠绿翡翠方牌 货号125557</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">56800</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/20028" target="_blank"> <img
+                                            alt="【全球原产】伊朗鸵鸟油舒缓组 货号124927"
+                                            src="https://pic1.cnrmall.com/image/64/11/6411398718c62a071a16c20aeccf41db.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/20028" title="【全球原产】伊朗鸵鸟油舒缓组 货号124927"
+                                            target="_blank">【全球原产】伊朗鸵鸟油舒缓组 货号124927</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">399</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/4276" target="_blank"> <img
+                                            alt="百年聚华驴腿肉套组 货号121752"
+                                            src="https://pic2.cnrmall.com/image/19/a9/19a918b5da6e1ac9cd1c41cdcf181c5f.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/4276" title="百年聚华驴腿肉套组 货号121752" target="_blank">百年聚华驴腿肉套组
+                                            货号121752</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">298</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/13380" target="_blank"> <img
+                                            alt="【中国农垦】北大荒 黑龙江农垦 龙良长粒香米2.5kg"
+                                            src="https://pic5.cnrmall.com/image/8e/77/8e772cbd3fa1a21eae6f7e81679e5ded.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/13380" title="【中国农垦】北大荒 黑龙江农垦 龙良长粒香米2.5kg"
+                                            target="_blank">【中国农垦】北大荒 黑龙江农垦 龙良长粒香米2.5kg</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">39</span><span
+                                        class="pointer">.</span><span class="decimal">90</span>
+                                </dl>
+                            </li>
+                            <li class="goods-item"
+                                style="float: left; list-style: none; position: relative; width: 195px;">
+                                <div class="goods-pic"><a href="/goods/5049" target="_blank"> <img
+                                            alt="西王牌玉米胚芽保健油特惠组 货号122944"
+                                            src="https://pic3.cnrmall.com/image/d5/59/d5599122ed4a5fe0507fd368509bda04.jpg@240w_240h">
+                                    </a> </div>
+                                <dl class="goods-info">
+                                    <dt><a href="/goods/5049" title="西王牌玉米胚芽保健油特惠组 货号122944"
+                                            target="_blank">西王牌玉米胚芽保健油特惠组 货号122944</a></dt>
+                                    <span class="yuan">￥</span><span class="integer">399</span><span
+                                        class="pointer">.</span><span class="decimal">00</span>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bx-controls bx-has-pager bx-has-controls-direction">
+                        <div class="bx-pager bx-default-pager">
+                            <div class="bx-pager-item"><a href="" data-slide-index="0"
+                                    class="bx-pager-link active">1</a></div>
+                            <div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div>
+                        </div>
+                        <div class="bx-controls-direction"><a class="bx-prev disabled" href="javascript:;"
+                                style="display: none;">&lt;</a><a class="bx-next" href="javascript:;"
+                                style="display: none;">&gt;</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的足迹E -->
+        </div>
+
+
+    </div>
+
+    <!-- 悬浮 -->
+    <div class="nc-toolbar-wrap" id="ncGlobalToolbar">
+        <div class="nc-toolbar">
+            <!-- S 弹出层区域 -->
+            <div class="nc-toolbar-panels">
+                <!-- S 会员信息展示区域 -->
+                <div data-nc-tbar-name="member" class="nc-toolbar-panel nc-tbar-panel-jdvip"
+                    style="visibility: visible; z-index: 2;">
+                    <h3 class="nc-tbar-panel-header J-panel-header"> <span class="title"> <i></i> <em
+                                class="title">商城会员</em>
+                        </span> <span class="close-panel" data-nc-tbar-close=""></span> </h3>
+                    <div class="nc-tbar-panel-main">
+                        <div class="nc-tbar-panel-content nc-tbar-member" style="overflow: hidden; height: 800px;">
+                            <div class="preson-block">
+                                <div class="preson-info">
+                                    <div class="avatar"> <a href="/member/" target="_blank" class=""> <img
+                                                src="https://statics.cnrmall.com/public/img/avatar.gif@160w_160h">
+                                        </a> </div>
+                                    <div class="info">
+                                        <div class="name" title=""> <a href="/member/" target="_blank"> 13032890253 </a>
+                                        </div>
+                                        <div class="user-rank"> <a href="/member/" target="_blank"
+                                                class="user-marker-item action-tips"><sub title="会员等级">暂无等级会员</sub></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-info grid-layout"> <a target="_blank" href="/member/pointslog"
+                                        class="account-info-item dou column-3">
+                                        <div class="info-value">0</div>
+                                        <div class="info-name">积分</div>
+                                    </a> <a target="_blank" href="/member/voucher/index"
+                                        class="account-info-item coupon column-3">
+                                        <div class="info-value">0</div>
+                                        <div class="info-name">店铺券</div>
+                                    </a> <a target="_blank" href="/member/coupon/list"
+                                        class="account-info-item gb column-3">
+                                        <div class="info-value">2</div>
+                                        <div class="info-name">品币</div>
+                                    </a> </div>
+                            </div>
+                            <!-- 店铺券列表 -->
+                            <div id="voucher-items" class="nc-tbar-ticket">
+                                <div class="title-block"> <span class="text">店铺券</span>
+                                    <div class="line"></div>
+                                </div>
+                                <ul class="nctb-ticket-list voucher" id="voucherListNcTbar">
+                                </ul>
+                                <a href="/member/voucher/index" target="_blank" class="more">查看更多店铺券</a>
+                            </div>
+                            <!-- 品币列表 -->
+                            <div id="coupon-items" class="nc-tbar-ticket">
+                                <div class="title-block"> <span class="text">品币</span>
+                                    <div class="line"></div>
+                                </div>
+                                <ul class="nctb-ticket-list redpackage" id="couponListNcTbar">
+                                </ul>
+                                <a href="/member/coupon/list" target="_blank" class="more">查看更多品币</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nc-tbar-panel-footer"></div>
+                </div>
+                <!-- E 会员信息展示区域 -->
+
+                <!-- S 购物车展示区域 -->
+                <div data-nc-tbar-name="cart" class="nc-toolbar-panel nc-tbar-panel-cart"
+                    style="visibility: visible; z-index: 2;">
+                    <h3 class="nc-tbar-panel-header J-panel-header"> <a
+                            href="http://localhost:1811/liangjiayong/src/html/cart.html" target="_blank" class="title">
+                            <i></i> <em class="title">购物车</em> </a> <span class="close-panel"></span> </h3>
+                    <div class="nc-tbar-panel-main">
+                        <div class="nc-tbar-panel-content" style="height: 159px;">
+                            <div>
+                                <div class="nc-tbar-cart-list" id="tbarCartGoodsList">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nc-tbar-panel-footer">
+                        <div class="nc-tbar-checkout" data-goods-price="">
+                            <div class="jtc-number">共&nbsp;<strong id="tbarCartCount">0</strong>&nbsp;种商品</div>
+                            <div class="jtc-sum"> 共计： <strong class="tbarCartotal" id="tbarCartotal"></strong> </div>
+                            <a class="jtc-btn" href="http://localhost:1811/liangjiayong/src/html/cart.html"
+                                target="_blank">去购物车结算</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- E 购物车展示区域 -->
+
+                <!-- S 关注 -->
+                <!-- <div data-nc-tbar-name="follow" class="nc-toolbar-panel nc-tbar-panel-follow">
+                            <h3 class="nc-tbar-panel-header J-panel-header"> <a href="javascript:;" class="title"> <i></i> <em
+                                        class="title">我的收藏</em> </a> <span class="close-panel"></span> </h3>
+                            <div class="nc-tbar-panel-main">
+                                <div class="follow-tabnav">
+                                    <ul>
+                                        <li class="ui-switchable-item curr" data-nc-index="goods"> <a>商品</a> <span></span> </li>
+                                        <li class="ui-switchable-item" data-nc-index="store" style="border-right:0;"> <a>店铺</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nc-tbar-panel-content" style="height: 209px;">
+                                    <div class="follow-tabcontents" id="tbarFollowTab">
+                                        <div id="tbarFollowTabPanel" style="width:600px;position:relative">
+                                            <div class="follow-tab-content follow-product-list follow-tab-content-slected" id="followTabContent_goods">
+                                                <ul id="goodsFavListTbarFollow">
+                                                </ul>
+                                                <a href="/member/favorites/goods" class="follow-bottom-more" target="_blank">查看更多收藏商品
+                                                    &gt;&gt;</a>
+                                            </div>
+                                            <div class="follow-tab-content follow-shop-list" id="followTabContent_store">
+                                                <ul id="storeFavListTbarFollow">
+                                                </ul>
+                                                <a href="/member/favorites/store" class="follow-bottom-more" target="_blank">查看更多收藏店铺
+                                                    &gt;&gt;</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nc-tbar-panel-footer J-panel-footer"></div>
+                        </div> -->
+                <!-- E 关注 -->
+
+                <!-- S 足迹 -->
+                <!-- <div data-nc-tbar-name="history" class="nc-toolbar-panel nc-tbar-panel-history">
+                            <h3 class="nc-tbar-panel-header"> <a href="javascript:;" class="title"> <i></i> <em class="title">我的足迹</em>
+                                </a> <span class="close-panel"></span> </h3>
+                            <div class="nc-tbar-panel-main">
+                                <div class="nc-tbar-panel-content" id="histbarPanelContent" style="height: 209px;">
+                                    <div class="jt-history-wrap">
+                                        <ul id="hisListTbar">
+        
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbar-panel-footer"></div>
+                        </div> -->
+                <!-- E 足迹 -->
+
+                <!-- S 二维码展示区域 -->
+                <!-- <div class="nc-toolbar-panel nc-tbar-panel-qrcode" data-nc-tbar-name="qrcode">
+                            <h3 class="nc-tbar-panel-header J-panel-header"> <i></i> <em class="title">二维码</em><span class="close-panel"></span>
+                            </h3>
+                            <div class="nc-qrcode-container">
+                                <div class="nc-tbar-qrcode-item">
+                                    <img src="https://pic.cnrmall.com/qr/app/url.gif">
+                                    <div class="nc-app-download">
+                                        <h1>扫描二维码<br>更多优惠关注微信公众号</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                <!-- E 二维码展示区域 -->
+
+                <!-- S 优惠券展示区域 -->
+
+                <!-- E 优惠券展示区域 -->
+            </div>
+            <!-- E 弹出层区域 -->
+
+            <div class="nc-toolbar-header"></div>
+
+            <!-- S 悬浮小图展示区域 -->
+            <div class="nc-toolbar-tabs">
+                <!-- 会员 -->
+                <div data-nc-tag-type="member" class="nc-toolbar-tab nc-tbar-tab-user"> <i class="tab-tip"></i> <i
+                        class="tab-ico"></i> <em class="tab-text">商城会员</em> </div>
+                <!-- 购物车 -->
+                <div data-nc-tag-type="cart" class="nc-toolbar-tab nc-tbar-tab-cart"> <i class="tab-ico"></i> <em
+                        class="tab-text">购物车</em>
+                    <span class="tab-sub" id="tbarCartNum">5</span> </div>
+                <!-- 优惠券 -->
+                <div data-nc-tag-type="couponActivity" class="nc-toolbar-tab nc-tbar-tab-coupon" style="display: none;">
+                    <i class="tab-ico"></i> <em class="tab-text">优惠券</em></div>
+                <!-- 关注 -->
+                <div data-nc-tag-type="follow" class="nc-toolbar-tab nc-tbar-tab-follow"> <i class="tab-ico"></i> <em
+                        class="tab-text">我的收藏</em> </div>
+                <!-- 足迹 -->
+                <div data-nc-tag-type="history" class="nc-toolbar-tab nc-tbar-tab-history"> <i class="tab-ico"></i> <em
+                        class="tab-text">我的足迹</em> </div>
+                <!-- 消息 -->
+                <div data-nc-tag-type="message" class="nc-toolbar-tab nc-tbar-tab-message"> <a href="javascript:;"> <i
+                            class="tab-ico"></i> <em class="tab-text">我的消息</em> </a> </div>
+                <!-- 二维码 -->
+                <div data-nc-tag-type="qrcode" class="nc-toolbar-tab nc-tbar-tab-qrCode"><i class="tab-ico"></i><em
+                        class="tab-text">二维码</em></div>
+            </div>
+            <!-- E 悬浮小图展示区域 -->
+
+            <div class="nc-toolbar-footer">
+                <div class=" nc-toolbar-tab nc-tbar-tab-top"> <a href="javascript:;" id="tbarGoTop"> <i
+                            class="tab-ico"></i>
+                        <em class="tab-text">顶部</em> </a> </div>
+            </div>
+
+            <div class="nc-toolbar-mini"></div>
+
+        </div>
+    </div>
+
+
+
+    <div class="ccti">
+        <div class="wrapper">
+            <div class="ccti-footer">
+                <i class="cti01"></i>
+                <i class="cti02"></i>
+                <i class="cti03"></i>
+                <i class="cti04"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="faq">
+        <div class="wrapper">
+            <div class="notice">
+                <div class="title">
+                    <h2>公告</h2>
+                </div>
+                <div class="content-news">
+                    <ul>
+                        <li><a target="_blank" href="###">【公告】关于春节期间物流配送事宜</a></li>
+                        <li><a target="_blank" href="###">【公告】 央广购物推“超级服务中心”五大服务全新升级</a></li>
+                        <li><a target="_blank" href="###">【公告】有关对购买资中塔罗科血橙商品的用户赠送歉意礼金券事宜</a></li>
+                        <li><a target="_blank" href="###">【公告】书籍开启梦想 爱心孕育希望</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="link">
+                <li>
+                    <dl class="s1">
+                        <dt> 购物指南 </dt>
+                        <dd><a target="_blank" href="###" title="免费注册">免费注册</a></dd>
+                        <dd><a target="_blank" href="###" title="购物流程">购物流程</a></dd>
+                        <dd><a target="_blank" href="###" title="用户注册协议">用户注册协议</a></dd>
+                        <dd><a target="_blank" href="###" title="电子发票（自营商品）">电子发票（自营商品）</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt> 商家服务 </dt>
+                        <dd><a target="_blank" href="###" title="店铺命名标准">店铺命名标准</a></dd>
+                        <dd><a target="_blank" href="###" title="平台总则">平台总则</a></dd>
+                        <dd><a target="_blank" href="###" title="商家中心">商家中心</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt> 支付配送 </dt>
+                        <dd><a target="_blank" href="###" title="支付方式">支付方式</a></dd>
+                        <dd><a target="_blank" href="###" title="配送范围">配送范围</a></dd>
+                        <dd><a target="_blank" href="###" title="配送时间">配送时间</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt> 会员中心 </dt>
+                        <dd><a target="_blank" href="###" title="找回密码">找回密码</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt> 售后服务 </dt>
+                        <dd><a target="_blank" href="###" title="超级服务中心">超级服务中心</a></dd>
+                        <dd><a target="_blank" href="###" title="售后服务政策">售后服务政策</a></dd>
+                        <dd><a target="_blank" href="###" title="无忧购物">无忧购物</a></dd>
+                        <dd><a target="_blank" href="###" title="权威监督">权威监督</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="wrapper">
+            <p><a href="ind.html">首页</a>
+                | <a target="_blank" href="https://www.cnrmall.com/article/list/199093">招商合作</a> | <a target="_blank"
+                    href="https://www.cnrmall.com/article/info/22">关于央广购物</a> | <a target="_blank"
+                    href="https://www.cnrmall.com/article/info/175304">联系我们</a>
+                | <a target="_blank" href="http://scm.cnrmall.com/veninfo/venlogin/index.jsp">成为供应商</a>
+            </p>
+            <p>京公网安备：11011502002190&nbsp;&nbsp;<a target="_blank"
+                    href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备19000295号</a>&nbsp;&nbsp;<a
+                    target="_blank" href="javascript:;">食品流通许可证编号：SP1101151210063489</a>&nbsp;&nbsp;
+                <a target="_blank" href="javascript:;">信息网络传播视听节目许可证 0102002号</a>&nbsp;&nbsp;<a target="_blank"
+                    href="https://cnr-xiaopin.oss-cn-beijing.aliyuncs.com/certificate/%E5%89%AF%E6%9C%AC.jpg">营业执照</a>
+            </p>
+            <p>Copyright<em style="font-family:Arial,Verdana; margin:0 4px">©</em>2010-2019 cnrmall.com All Rights
+                Reserved&nbsp;&nbsp;&nbsp;&nbsp;服务热线：4008-518-518</p>
+            <!--Copyright © 2018 央广小品,All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;京ICP备10038858号 京公网安备：11011502002190 服务热线：4008-518-518<br />-->
+            <!--Powered by <span style="font-weight: 600;"><font style="color:orange;">Cnrmall.com</font><font style="color:blue;"></font></span><br />-->
+            <!-- <script
+                type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1260731735'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1260731735' type='text/javascript'%3E%3C/script%3E"));</script> -->
+            <span id="cnzz_stat_icon_1260731735"></span>
+            <script src=" https://w.cnzz.com/q_stat.php?id=1260731735" type="text/javascript"></script>
+
+            <script>
+                var _hmt = _hmt || [];
+                (function () {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?905123a113c36971dd79389429636f4c";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script>
+            <ul class="footer-img">
+                <li><a class="img01" href="javascript:;"></a></li>
+                <li>
+                    <!-- <script src="https://kxlogo.knet.cn/seallogo.dll?sn=e16110811011565130ecka000000&amp;size=0"></script> -->
+                    <span style="display:inline-block;position:relative;width:auto;">
+                        <a href="https://ss.knet.cn/verifyseal.dll?sn=e16110811011565130ecka000000&amp;ct=df&amp;a=1&amp;pa=0.8130624962005342"
+                            id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;">
+                            <img src="https://ss.knet.cn/static/images/logo/cnnic.png" style="border:none;"
+                                oncontextmenu="return false;" alt="可信网站">
+                        </a>
+                    </span>
+                </li>
+                <li><a id="___szfw_logo___" href="https://credit.szfw.org/CX63030000051620161107.html"
+                        target="_blank"><img src="http://icon.szfw.org/cert.png" border="0"></a></li>
+                <li><a class="img05" href="http://www.bj.cyberpolice.cn/index.do" target="_blank"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
